@@ -1,0 +1,15 @@
+query Movies {
+  Movies {
+    id_movies
+    Title
+    Genre
+    Duration
+    Rating
+    Release
+    Streaming
+    Synopsis
+    View
+    Path_Poster
+    Path_image
+  }
+}

@@ -1,0 +1,10 @@
+query HomeImage {
+  Home {
+    Movies {
+      id_movies
+      Path_image
+      Title
+      Path_Poster
+    }
+  }
+}

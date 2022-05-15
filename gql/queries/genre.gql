@@ -1,0 +1,9 @@
+query MyQuery {
+  Genre_by_pk(Genre: "Action") {
+    Genre
+    movies {
+      id_movies
+      Title
+    }
+  }
+}

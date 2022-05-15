@@ -1,0 +1,17 @@
+query IndonesiaMovies {
+  Condition_by_pk(Rate: "ForKids") {
+    Movies (limit: 4) {
+      Duration
+      Genre
+      Path_Poster
+      Path_image
+      Rating
+      Release
+      Streaming
+      Synopsis
+      Title
+      View
+      id_movies
+    }
+  }
+}

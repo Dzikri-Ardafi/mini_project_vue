@@ -1,13 +1,13 @@
 <template>
-  <h1>welcome to  GenrePage</h1>
+  <h1>asda</h1>
 </template>
 
 <script>
 export default {
-
+    name: 'AdventurePage'
 }
 </script>
 
 <style>
-  
+
 </style>

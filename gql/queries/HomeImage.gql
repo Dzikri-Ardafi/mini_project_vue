@@ -1,10 +1,9 @@
-query HomeImage {
-  Home {
+query MyQuery {
+  Home_by_pk(home: "True") {
     Movies {
+      Title
       id_movies
       Path_image
-      Title
-      Path_Poster
     }
   }
 }

@@ -26,7 +26,7 @@
   
       <v-col cols="6">
   <ApolloQuery 
-    :query="require('../gql/queries/TopRatings.gql')"> 
+    :query="require('../gql/queries/HomeImage.gql')"> 
   <template v-slot="{ result: { loading, error, data } }">
   <!-- Loading -->
         <div v-if="loading" class="loading apollo">Loading...</div>
@@ -40,8 +40,8 @@
         hide-delimiter-background
         >
     <v-carousel-item
-      v-for="items in data.Home.Movies"
-      :key="items.Title"
+      v-for="newItem in data.Home_by_pk.Movies"
+      :key="newItem.Title" 
       
       class="mx-auto"
       
@@ -50,7 +50,7 @@
       style="border-radius: 20px"
     >
     <v-img style="border-radius: 10px; margin-bottom: auto"
-      :src="items.Path_Poster"
+      :src="newItem.Path_image"
       class="mx-auto"
       max-height="290px"
       max-width="500px"
@@ -116,6 +116,7 @@ export default {
 <style>
     .jangancontainer{
       background-image: url("../static/h.jpg"); 
+      
     };
     #container1{
       background-color: rgb(0, 1, 51);

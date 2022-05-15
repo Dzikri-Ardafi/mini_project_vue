@@ -27,9 +27,12 @@
                   height="400px"
                   max-width="auto">
                 </v-img>
-                <v-card-subtitle>
+                <h4>
                   {{movie.Title}}
-                </v-card-subtitle>
+                </h4>
+ <v-card-text>
+  {{movie.Release}}
+</v-card-text>
             </v-card>
            
           </v-col>
@@ -82,9 +85,9 @@
       height="400px"
     ></v-img>
 
-    <v-card-subtitle>
+    <h4>
       {{Indonesia.Title}}
-    </v-card-subtitle>
+    </h4>
 
     
   </v-card>
@@ -139,12 +142,12 @@
       :src="kids.Path_Poster"
       height="400px"
     ></v-img>
-
-    <v-card-subtitle>
+<div class="text-left">
+    <h4>
       {{kids.Title}}
-    </v-card-subtitle>
-
-    
+    </h4>
+<h5>{{kids.Release}}</h5>
+</div>   
       
     
   </v-card>

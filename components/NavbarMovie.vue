@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar
-      color="transparent"
+      color="cyan darken-4"
       elevation="0"
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>

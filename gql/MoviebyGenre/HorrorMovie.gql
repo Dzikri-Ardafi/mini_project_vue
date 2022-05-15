@@ -1,5 +1,5 @@
 query MyQuery {
-  Genre_by_pk(Genre: "Crime") {
+  Genre_by_pk(Genre: "Horror") {
     Movies {
       Duration
       Genre

@@ -2,7 +2,7 @@
 <div>
     <v-container>
         <ApolloQuery 
-            :query="require('../../gql/MoviebyGenre/ActionMovie.gql')"> 
+            :query="require('../../gql/MoviebyGenre/HorrorMovie.gql')"> 
                 <template v-slot="{ result: { loading, error, data } }">
                                 <!-- Loading -->
                     <div v-if="loading" class="loading apollo">Loading...</div>
@@ -18,19 +18,19 @@
 
                          <br>  
                         <v-row>
-                            <v-col cols="3" justify-space-around mb-6  v-for="action in data.Genre_by_pk.Movies " :key="action.Title">
+                            <v-col cols="3" justify-space-around mb-6  v-for="horror in data.Genre_by_pk.Movies " :key="horror.Title">
                                 <v-card :loading="loading" style="border-radius: 10px" 
                                     class="mx-auto"
                                     max-width="200" 
                                     color="transparent" 
                                 >
                                     <v-img
-                                        :src="action.Path_Poster"
+                                        :src="horror.Path_Poster"
                                         height="400px"
                                     ></v-img>
                                     <div class="text-left">
-                                        <h4>{{action.Title}}</h4>
-                                        <h5>{{action.Release}}</h5>
+                                        <h4>{{horror.Title}}</h4>
+                                        <h5>{{horror.Release}}</h5>
                                     </div> 
                                 </v-card> <br>
                             </v-col>
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-    name: 'ActionPage',
+    name: 'HorrorPage',
     layout: 'moviePage'
 }
 </script>

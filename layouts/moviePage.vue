@@ -16,6 +16,6 @@ export default {
 
 <style>
   .action{
-    background-color: rgb(0, 0, 24);
+    background-color: #000018;
   }
 </style>

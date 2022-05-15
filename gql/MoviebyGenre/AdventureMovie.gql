@@ -1,0 +1,18 @@
+query MyQuery {
+  Genre_by_pk(Genre: "Adventure") {
+    Movies {
+      Duration
+      Genre
+      Path_Poster
+      Rating
+      Release
+      Title
+      id_movies
+      image_home
+      Path_image
+      Streaming
+      Synopsis
+      View
+    }
+  }
+}

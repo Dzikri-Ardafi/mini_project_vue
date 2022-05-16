@@ -13,7 +13,7 @@
                     
                       <div><br>
                       <v-row>
-                          <v-col cols="6"><h1>Action</h1></v-col>
+                          <v-col cols="6"><h1>Horror</h1></v-col>
                       </v-row> 
 
                          <br>  
@@ -56,11 +56,11 @@
 export default {
     name: 'HorrorPage',
     layout: 'moviePage',
-    methods:{
+    methods: {
         goTo(Title) {
-            this.$router.push('/detail/$(Title)');
-        }
-    }
+        this.$router.push(`/detail/${Title}`);
+        },
+        } 
 }
 </script>
 

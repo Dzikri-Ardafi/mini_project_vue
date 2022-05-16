@@ -1,6 +1,6 @@
-query MyQuery {
-  Condition_by_pk(Rate: "TopRating") {
-    Movies (limit: 4) {
+query UpComingMovies {
+  Condition_by_pk(Rate: "UpComing") {
+    Movies {
       Duration
       Genre
       Path_Poster

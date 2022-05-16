@@ -13,7 +13,7 @@
                     
                       <div><br>
                       <v-row>
-                          <v-col cols="6"><h1>Action</h1></v-col>
+                          <v-col cols="6"><h1>Crime</h1></v-col>
                       </v-row> 
 
                          <br>  

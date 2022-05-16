@@ -34,7 +34,7 @@
     </v-menu>
   </div>
 </div>
-      <v-btn
+      <v-btn to="/Up-Coming"
             color="transparent" 
             v-bind="attrs"
             v-on="on">

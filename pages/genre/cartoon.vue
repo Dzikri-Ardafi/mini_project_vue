@@ -22,7 +22,8 @@
                                 <v-card :loading="loading" style="border-radius: 10px" 
                                     class="mx-auto"
                                     max-width="200" 
-                                    color="transparent" 
+                                    color="transparent"
+                                    @click="goTo(cartoon.Title)" 
                                 >
                                     <v-img
                                         :src="cartoon.Path_Poster"
@@ -54,7 +55,12 @@
 <script>
 export default {
     name: 'CartoonPage',
-    layout: 'moviePage'
+    layout: 'moviePage',
+    methods: {
+    goTo(Title) {
+      this.$router.push(`/detail/${Title}`);
+    },
+    }
 }
 </script>
 

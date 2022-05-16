@@ -23,6 +23,7 @@
                                     class="mx-auto"
                                     max-width="200" 
                                     color="transparent" 
+                                    @click="goTo(horror.Title)"
                                 >
                                     <v-img
                                         :src="horror.Path_Poster"
@@ -54,7 +55,12 @@
 <script>
 export default {
     name: 'HorrorPage',
-    layout: 'moviePage'
+    layout: 'moviePage',
+    methods:{
+        goTo(Title) {
+            this.$router.push('/detail/$(Title)');
+        }
+    }
 }
 </script>
 

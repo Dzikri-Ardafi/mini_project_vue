@@ -1,0 +1,15 @@
+query byTitle ($Title: String!) {
+  Movies_by_pk(Title: $Title) {
+    Duration
+    Genre
+    Path_Poster
+    Path_image
+    Rating
+    Release
+    Streaming
+    Synopsis
+    Title
+    View
+    id_movies
+  }
+}

@@ -23,6 +23,7 @@
                                     class="mx-auto"
                                     max-width="200" 
                                     color="transparent" 
+                                    @click="goTo(newItem.Title)"
                                 >
                                     <v-img
                                         :src="comedy.Path_Poster"
@@ -54,7 +55,12 @@
 <script>
 export default {
     name: 'ComedyPage',
-    layout: 'moviePage'
+    layout: 'moviePage',
+    methods: {
+    goTo(Title) {
+      this.$router.push(`/detail/${Title}`);
+    },
+    }
 }
 </script>
 

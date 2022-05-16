@@ -14,14 +14,15 @@
       <div v-else-if="data" class="result apollo">
   <h2>Top Movie</h2>
   
-        <v-row >
+        <v-row>
           <v-col cols="1"></v-col>
           <v-col cols="10" class="d-flex justify-space-around mb-6">
             
             <v-card style="border-radius: 10px" v-for="movie in data.Condition_by_pk.Movies "
                   :key="movie.Title"
                   max-width="200"  
-                  color="transparent">
+                  color="transparent"
+                  @click="goTo(movie.Title)">
                 <v-img
                   :src="movie.Path_Poster"
                   height="400px"
@@ -78,7 +79,8 @@
       <v-card style="border-radius: 10px" v-for="Indonesia in data.Condition_by_pk.Movies "
       :key="Indonesia.Title"
        max-width="200"
-       color="transparent"  
+       color="transparent" 
+       @click="goTo(Indonesia.Title)" 
   >
     <v-img
       :src="Indonesia.Path_Poster"
@@ -136,7 +138,8 @@
       <v-card style="border-radius: 10px" v-for="kids in data.Condition_by_pk.Movies "
       :key="kids.Title"
        max-width="200" 
-       color="transparent" 
+       color="transparent"
+       @click="goTo(kids.Title)" 
   >
     <v-img
       :src="kids.Path_Poster"
@@ -181,9 +184,12 @@
 export default {
     name: "HomePage",
     layout: 'homePage',
-
-
-    
+    methods: {
+    goTo(Title) {
+      this.$router.push(`/detail/${Title}`);
+    },
+    }
+   
 }
    
 </script>

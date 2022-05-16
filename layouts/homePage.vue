@@ -38,11 +38,12 @@
         height="290"
         cycle
         hide-delimiter-background
+        
         >
     <v-carousel-item
       v-for="newItem in data.Home_by_pk.Movies"
       :key="newItem.Title" 
-      
+      @click="goTo(newItem.Title)"
       class="mx-auto"
       
       reverse-transition="fade-transition"
@@ -53,7 +54,7 @@
       :src="newItem.Path_image"
       class="mx-auto"
       max-height="290px"
-      max-width="500px"
+      max-width="500px" 
     ></v-img>
     </v-carousel-item>
   </v-carousel>
@@ -61,37 +62,7 @@
   </template>
 
   </ApolloQuery>
-    <template v-slot:prev="{ on, attrs }">
-      <v-icon
-        v-bind="attrs"
-        v-on="on"
-        color="white"
-        size="48"
-        v-text="'mdi-chevron-left'"
-      ></v-icon>
-    </template>
-    <template v-slot:next="{ on, attrs }">
-      <v-icon
-        v-bind="attrs"
-        v-on="on"
-        color="white"
-        size="48"
-        v-text="'mdi-chevron-right'"
-      ></v-icon>
-    </template>
-    <v-window-item
-      v-for="n in 5"
-      :key="`card-${n}`"
-    >
-      <v-img style="border-radius: 10px; margin-bottom: auto"
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-      class="mx-auto"
-      max-height="290px"
-      max-width="500px"
-    ></v-img>
-    </v-window-item>
-    
-      </v-col>
+</v-col>
     
     </v-row>
   </v-container>     
@@ -110,6 +81,11 @@ export default {
     data: () => ({
       model: null,
       }),
+    methods: {
+    goTo(Title) {
+      this.$router.push(`/detail/${Title}`);
+    },
+    }
 }
 </script>
 

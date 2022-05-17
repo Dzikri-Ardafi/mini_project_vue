@@ -28,7 +28,10 @@
                                     <v-img
                                         :src="up.Path_Poster"
                                         height="400px"
-                                    ></v-img>
+                                    >
+                                    <v-avatar size="45" tile color="indigo darken-4">
+                    {{up.Rating}} <span><v-icon small color="orange">mdi-star</v-icon></span> 
+                  </v-avatar></v-img>
                                     <div class="text-left">
                                         <h4>{{up.Title}}</h4>
                                         <h5>{{up.Release}}</h5>

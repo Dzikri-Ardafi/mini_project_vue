@@ -28,7 +28,10 @@
                                     <v-img
                                         :src="comedy.Path_Poster"
                                         height="400px"
-                                    ></v-img>
+                                    >
+                                    <v-avatar size="45" tile color="indigo darken-4">
+                    {{comedy.Rating}} <span><v-icon small color="orange">mdi-star</v-icon></span> 
+                  </v-avatar></v-img>
                                     <h3> {{comedy.Title}} </h3><hr>
                                     <h5 style=" color: rgb(146, 146, 146)">                 
                                     {{comedy.Release}}

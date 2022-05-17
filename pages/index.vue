@@ -26,7 +26,10 @@
                 <v-img
                   :src="movie.Path_Poster"
                   height="400px"
-                  max-width="auto">
+                  max-width="auto"> 
+                  <v-avatar size="45" tile color="indigo darken-4">
+                    {{movie.Rating}} <span><v-icon small color="orange">mdi-star</v-icon></span> 
+                  </v-avatar>
                 </v-img>
                  <h3>
                   {{movie.Title}} </h3><hr>
@@ -89,7 +92,10 @@
     <v-img
       :src="Indonesia.Path_Poster"
       height="400px"
-    ></v-img>
+    >
+    <v-avatar size="45" tile color="indigo darken-4">
+                    {{Indonesia.Rating}} <span><v-icon small color="orange">mdi-star</v-icon></span> 
+                  </v-avatar></v-img>
 
     <h3>
                   {{Indonesia.Title}} </h3><hr>
@@ -151,7 +157,10 @@
     <v-img
       :src="kids.Path_Poster"
       height="400px"
-    ></v-img>
+    >
+    <v-avatar size="45" tile color="indigo darken-4">
+                    {{kids.Rating}} <span><v-icon small color="orange">mdi-star</v-icon></span> 
+                  </v-avatar></v-img>
 <h3>
                   {{kids.Title}} </h3><hr>
                  <h5 style=" color: rgb(146, 146, 146)">

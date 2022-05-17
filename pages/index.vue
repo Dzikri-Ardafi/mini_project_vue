@@ -127,7 +127,7 @@
  <v-container >
         
     <ApolloQuery 
-:query="require('../gql/queries/Forkids.gql')"
+:query="require('../gql/queries/ForKids.gql')"
 
 > 
 <template v-slot="{ result: { loading, error, data } }">

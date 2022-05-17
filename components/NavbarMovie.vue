@@ -5,7 +5,7 @@
       elevation="0"
     >
       
-      <v-btn color="transparent" elevation="0" to="/home"><h2>Home</h2></v-btn>
+      <v-btn color="transparent" elevation="0" to="/"><h2>Home</h2></v-btn>
 
       <div class="text-center">
         <v-menu

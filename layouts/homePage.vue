@@ -7,7 +7,7 @@
     <v-row>
       <v-col cols="12">
         <NavbarHome />
-      </v-col>
+      </v-col> 
     </v-row>
     <!-- Left Row -->
     <v-row>

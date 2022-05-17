@@ -13,12 +13,13 @@
     <v-row>
       <v-col cols="6">
         <div style="margin-top: 75px">
-          <h1 class="text-center font-weight-bold">Happy <span class="font-weight-regular">Watching "nama user"</span> </h1>
+          <h1 class="text-center font-weight-bold">Happy <span class="font-weight-regular">Watching</span> </h1>
             <v-btn
+            to="/All-Movies"
             color="#BF360C"
             elevation="2"
             small
-            style="margin-left:120px">Lets Watch</v-btn>
+            style="margin-left:210px">All Movies</v-btn>
         </div>
       </v-col>
 
@@ -59,6 +60,10 @@
     </v-carousel-item>
   </v-carousel>
       </div>
+    <div v-else class="no-result apollo text-center">
+            
+            <v-icon>mdi-spin mdi-loading</v-icon> 
+        </div>
   </template>
 
   </ApolloQuery>
@@ -69,6 +74,7 @@
     
 
   <Nuxt />
+   <Footer />
     </v-app>
 </div>
 </template>
@@ -96,6 +102,7 @@ export default {
     };
     #container1{
       background-color: rgb(0, 1, 51);
+      height: 100%;
       
     }
     

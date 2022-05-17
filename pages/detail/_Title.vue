@@ -14,7 +14,39 @@
 
         <!-- Result -->
         <div v-else-if="data" class="result apollo">
+        <v-overlay
+        :absolute="absolute"
+        :value="overlay" 
+        :opacity="opacity"
+        class="mx-auto"
+      >
+    <v-card width="700" class="mx-auto" color="transparent" elevation="0">
+      <div  style="margin-left: 650px">
+        <v-btn
+        large
+        fab
+         icon @click="overlay = false"> 
+            <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </div>
+      <div >
+        <iframe
+        class="mx-auto"
+        width="650" 
+        height="400" 
+        style="border-radius: 5px"
+        :src="data.Movies_by_pk.Streaming" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; 
+        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe> 
+      </div>
+    </v-card>
+    </v-overlay>
             <v-row>
+
+<!-- Poster Detail -->
                 <v-col cols="6">
                     <v-card
                         :loading="loading"
@@ -45,7 +77,10 @@
                                 <h4 style="margin-top:3px">{{data.Movies_by_pk.Rating}} ({{data.Movies_by_pk.View}}) </h4>
                             </v-row>
                         </v-card-text>
-                        <v-btn block class="red accent-4" style="border-radius: 15px">
+                        <v-btn block 
+                        class="red accent-4" 
+                        style="border-radius: 15px"
+                        @click="overlay = !overlay">
                             Watch Trailer 
                             <span class="mx-1">
                                 <v-icon>
@@ -56,6 +91,7 @@
                     </v-card>
                 </v-col>
 
+<!-- Detail Movies -->
                 <v-col cols="6">
                     <v-card color="dark" height="570" class="my-5 mx-auto">
                     <br>
@@ -127,7 +163,10 @@
         </div>
 
         <!-- No result -->
-        <div v-else class="no-result apollo">No result :(</div>
+       <div v-else class="no-result apollo text-center" >
+            <h4>Getting Your Movies</h4>
+            <v-icon large>mdi-spin mdi-loading</v-icon> 
+        </div>
       </template>
     </ApolloQuery>
   
@@ -139,28 +178,12 @@
 export default {
     name: 'DetailPage',
     layout: 'moviePage',
-    data () {
-      return {
-        desserts: [
-          {
-            name: 'Genre',
-            
-          },
-          {
-            name: 'Duration',
-            
-          },
-          {
-            name: 'Release',
-            
-          },
-          {
-            name: 'Synopsis',
-            
-          },
-        ],
-      }
-    },
+    data: () => ({
+        overlay: false,
+        absolute: true,
+        opacity: 0.8,
+        zIndex: 0,
+    }) ,
     computed: {
     Title() {
       return this.$route.params.Title;

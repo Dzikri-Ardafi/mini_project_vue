@@ -18,7 +18,7 @@
           <v-col cols="1"></v-col>
           <v-col cols="10" class="d-flex justify-space-around mb-6">
             
-            <v-card style="border-radius: 10px" v-for="movie in data.Condition_by_pk.Movies "
+            <v-card style="border-radius: 10px"  v-for="movie in data.Condition_by_pk.Movies "
                   :key="movie.Title"
                   max-width="200"  
                   color="transparent"
@@ -28,12 +28,11 @@
                   height="400px"
                   max-width="auto">
                 </v-img>
-                <h4>
-                  {{movie.Title}}
-                </h4>
- <v-card-text>
-  {{movie.Release}}
-</v-card-text>
+                 <h3>
+                  {{movie.Title}} </h3><hr>
+                 <h5 style=" color: rgb(146, 146, 146)">
+   {{movie.Release}}
+ </h5>
             </v-card>
            
           </v-col>
@@ -44,6 +43,7 @@
               fab
               small
               color="orange darken-4"
+              to="/Top-Movies"
             > 
               <v-icon color="black" size="40">
                 mdi-arrow-right
@@ -52,6 +52,10 @@
            </v-col>
         </v-row>
   </div>
+  <div v-else class="no-result apollo text-center" >
+            <h4>Getting Your Movies</h4>
+            <v-icon large>mdi-spin mdi-loading</v-icon> 
+        </div>
  </template>
    <br>
 </ApolloQuery>
@@ -87,9 +91,11 @@
       height="400px"
     ></v-img>
 
-    <h4>
-      {{Indonesia.Title}}
-    </h4>
+    <h3>
+                  {{Indonesia.Title}} </h3><hr>
+                 <h5 style=" color: rgb(146, 146, 146)">
+   {{Indonesia.Release}}
+ </h5>
 
     
   </v-card>
@@ -102,6 +108,7 @@
       fab
       small
       color="orange darken-4"
+      to="/Indonesia-Movies"
     >
       <v-icon color="black" size="40">
         mdi-arrow-right
@@ -145,12 +152,11 @@
       :src="kids.Path_Poster"
       height="400px"
     ></v-img>
-<div class="text-left">
-    <h4>
-      {{kids.Title}}
-    </h4>
-<h5>{{kids.Release}}</h5>
-</div>   
+<h3>
+                  {{kids.Title}} </h3><hr>
+                 <h5 style=" color: rgb(146, 146, 146)">
+   {{kids.Release}}
+ </h5> 
       
     
   </v-card>
@@ -163,6 +169,7 @@
       fab
       small
       color="orange darken-4"
+      to="/For-Kids-Movies"
     >
       <v-icon color="black" size="40">
         mdi-arrow-right
@@ -197,5 +204,6 @@ export default {
 <style>
   .apps{
     background-color: rgb(0, 0, 24);
+     color: rgb(146, 146, 146);
   }
 </style>

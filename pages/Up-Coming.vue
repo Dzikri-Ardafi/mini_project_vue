@@ -39,6 +39,10 @@
                       </div>
                         
                     </div>
+                    <div v-else class="no-result apollo text-center" >
+            <h4>Getting Your Movies</h4>
+            <v-icon large>mdi-spin mdi-loading</v-icon> 
+        </div>
                 </template>
   
   

@@ -1,0 +1,17 @@
+query IndonesiaMovies {
+  Condition_by_pk(Rate: "IndonesiaMovies") {
+    Movies {
+      Duration
+      Genre
+      Path_Poster
+      Path_image
+      Rating
+      Release
+      Streaming
+      Synopsis
+      Title
+      View
+      id_movies
+    }
+  }
+}

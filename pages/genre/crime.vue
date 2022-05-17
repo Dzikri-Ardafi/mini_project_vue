@@ -29,16 +29,20 @@
                                         :src="crime.Path_Poster"
                                         height="400px"
                                     ></v-img>
-                                    <div class="text-left">
-                                        <h4>{{crime.Title}}</h4>
-                                        <h5>{{crime.Release}}</h5>
-                                    </div> 
+                                    <h3> {{crime.Title}} </h3><hr>
+                                    <h5 style=" color: rgb(146, 146, 146)">                 
+                                    {{crime.Release}}
+                                    </h5>  
                                 </v-card> <br>
                             </v-col>
                         </v-row>
                       </div>
                         
                     </div>
+                    <div v-else class="no-result apollo text-center" >
+            <h4>Getting Your Movies</h4>
+            <v-icon large>mdi-spin mdi-loading</v-icon> 
+        </div>
                 </template>
   
   

@@ -2,8 +2,10 @@
 <v-app >
 <div class="action">
     <NavbarMovie />
-  
+ 
   <Nuxt />
+ <Footer />
+
 </div>
 </v-app>
 </template>
@@ -17,5 +19,6 @@ export default {
 <style>
   .action{
     background-color: #000018;
+    height: 100%;
   }
 </style>

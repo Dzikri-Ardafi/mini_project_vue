@@ -2,7 +2,7 @@
 <div>
     <v-container>
         <ApolloQuery 
-            :query="require('../../gql/MoviebyGenre/ComedyMovie.gql')"> 
+            :query="require('../gql/condition/ForKids.gql')"> 
                 <template v-slot="{ result: { loading, error, data } }">
                                 <!-- Loading -->
                     <div v-if="loading" class="loading apollo">Loading...</div>
@@ -13,26 +13,27 @@
                     
                       <div><br>
                       <v-row>
-                          <v-col cols="6"><h1>Comedy</h1></v-col>
+                          <v-col cols="6"><h1>For Kids</h1></v-col>
                       </v-row> 
 
                          <br>  
                         <v-row>
-                            <v-col cols="3" justify-space-around mb-6  v-for="comedy in data.Genre_by_pk.Movies " :key="comedy.Title">
+                            <v-col cols="3" justify-space-around mb-6  v-for="up in data.Condition_by_pk.Movies " :key="up.Title">
                                 <v-card :loading="loading" style="border-radius: 10px" 
                                     class="mx-auto"
                                     max-width="200" 
                                     color="transparent" 
-                                    @click="goTo(newItem.Title)"
+                                    @click="goTo(up.Title)"
                                 >
                                     <v-img
-                                        :src="comedy.Path_Poster"
+                                        :src="up.Path_Poster"
                                         height="400px"
                                     ></v-img>
-                                    <h3> {{comedy.Title}} </h3><hr>
-                                    <h5 style=" color: rgb(146, 146, 146)">                 
-                                    {{comedy.Release}}
-                                    </h5> 
+                                    <h3>
+                  {{up.Title}} </h3><hr>
+                 <h5 style=" color: rgb(146, 146, 146)">
+   {{up.Release}}
+ </h5> 
                                 </v-card> <br>
                             </v-col>
                         </v-row>
@@ -58,7 +59,7 @@
 
 <script>
 export default {
-    name: 'ComedyPage',
+    name: 'ForKidsMoviesPage',
     layout: 'moviePage',
     methods: {
     goTo(Title) {

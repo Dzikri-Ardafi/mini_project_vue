@@ -29,16 +29,20 @@
                                         :src="horror.Path_Poster"
                                         height="400px"
                                     ></v-img>
-                                    <div class="text-left">
-                                        <h4>{{horror.Title}}</h4>
-                                        <h5>{{horror.Release}}</h5>
-                                    </div> 
+                                    <h3> {{horror.Title}} </h3><hr>
+                                    <h5 style=" color: rgb(146, 146, 146)">                 
+                                    {{horror.Release}}
+                                    </h5> 
                                 </v-card> <br>
                             </v-col>
                         </v-row>
                       </div>
                         
                     </div>
+                    <div v-else class="no-result apollo text-center" >
+            <h4>Getting Your Movies</h4>
+            <v-icon large>mdi-spin mdi-loading</v-icon> 
+        </div>
                 </template>
   
   

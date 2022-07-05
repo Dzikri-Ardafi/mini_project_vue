@@ -198,6 +198,7 @@
 
 <script>
 export default {
+    
     name: "HomePage",
     layout: 'homePage',
     methods: {
@@ -205,7 +206,8 @@ export default {
       this.$router.push(`/detail/${Title}`);
     },
     }
-   
+     
+    
 }
    
 </script>

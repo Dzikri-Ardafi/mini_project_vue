@@ -4,7 +4,7 @@
     <NavbarMovie />
  
   <Nuxt />
- <Footer />
+ 
 
 </div>
 </v-app>

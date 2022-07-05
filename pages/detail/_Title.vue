@@ -114,7 +114,7 @@
                                             </v-icon>
                                     </v-btn>
                                 </template>
-                                    <span>Add to Your Favorite Movie</span>
+                                    <span>Add to Your Favorite Movie (not-working)</span>
                             </v-tooltip>
                             <v-tooltip bottom>
                                 <template v-slot:activator="{ on, attrs }">
@@ -127,7 +127,7 @@
                                             </v-icon>
                                     </v-btn>
                                 </template>
-                                    <span>Watch Later</span>
+                                    <span>Watch Later (not-working)</span>
                             </v-tooltip>
                                 </div>
                             </v-col>

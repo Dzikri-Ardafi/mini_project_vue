@@ -51,7 +51,7 @@
         >
           <v-text-field
           style="margin-top: 25px"
-            label="Search Your Favorite Movie Here"
+            label="Belum Berfungsi"
             outlined
             dense
           ></v-text-field>

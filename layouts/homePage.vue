@@ -74,7 +74,7 @@
     
 
   <Nuxt />
-   <Footer />
+   
     </v-app>
 </div>
 </template>
